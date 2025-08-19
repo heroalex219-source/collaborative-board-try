@@ -26,14 +26,14 @@ export default function CopyButton({ value }: CopyButtonProps) {
     <Button
       type='button'
       variant='ghost'
-      className='h-fit rounded-sm p-0 hover:bg-background'
+      className='h-fit rounded-md p-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all duration-200'
       onClick={() => {
         copyToClipboard(value)
         setHasCopied(true)
       }}
     >
       <span className='sr-only'>Copy</span>
-      {hasCopied ? <Check className='h-3.5 w-3.5' /> : <Copy className='h-3.5 w-3.5' />}
+      {hasCopied ? <Check className='h-4 w-4 text-green-500' /> : <Copy className='h-4 w-4' />}
     </Button>
   )
 }

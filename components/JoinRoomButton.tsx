@@ -47,25 +47,29 @@ export default function JoinRoomButtoon() {
       return (
         <Dialog>
             <DialogTrigger asChild >
-                <Button>
+                <Button className='w-full h-11 bg-white dark:bg-gray-700 text-gray-900 dark:text-white border-2 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 font-medium rounded-lg transition-all duration-200'>
                     Join a Room
                 </Button>
 
             </DialogTrigger>
-            <DialogContent className='w-[90vw] max-w-[400px]'>
-        <DialogHeader className='pb-2'>
-          <DialogTitle>Join a room now!</DialogTitle>
+            <DialogContent className='w-[90vw] max-w-[400px] bg-white dark:bg-gray-800'>
+        <DialogHeader className='pb-6 text-center'>
+          <DialogTitle className='text-2xl font-bold'>Join a Room</DialogTitle>
         </DialogHeader>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-4'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
             <FormField
               control={form.control}
               name='username'
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder='Username' {...field} />
+                    <Input 
+                      className='h-11 bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent' 
+                      placeholder='Enter your username' 
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage className='text-xs' />
                 </FormItem>
@@ -78,14 +82,18 @@ export default function JoinRoomButtoon() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder='Room ID' {...field} />
+                    <Input 
+                      className='h-11 bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono' 
+                      placeholder='Enter room ID' 
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage className='text-xs' />
                 </FormItem>
               )}
             />
 
-            <Button type='submit' className='mt-2'>
+            <Button type='submit' className='mt-6 w-full h-11 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200'>
               {isLoading ? <Loader2 className='h-4 w-4 animate-spin' /> : 'Join'}
             </Button>
           </form>

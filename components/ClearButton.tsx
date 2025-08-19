@@ -35,8 +35,8 @@ const ClearButton = ({canvasRef,clear}:ClearButtonProps) => {
 
   return (
     <Button
-            variant='outline'
-            className='w-16 bg-stone-700 hover:bg-stone-800 rounded-none rounded-bl-md border-0 border-b border-l p-0 focus-within:z-10'
+            variant='ghost'
+            className='w-16 h-10 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-none rounded-r-lg text-gray-700 dark:text-gray-300 font-medium transition-all duration-200'
             onClick={clearCanvas}
             
           >

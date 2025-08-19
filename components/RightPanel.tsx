@@ -5,8 +5,8 @@ import StrokeWidthSlider from "./StrokeWidthSlider";
 
 export default function RightPanel(){
     return(
-        <div className="h-full flex bg-stone-700 justify-center py-5" >
-            <div className="h-full flex flex-col gap-6  w-[12.5rem] relative" >
+        <div className="h-full flex bg-white dark:bg-gray-900 justify-center py-6">
+            <div className="h-full flex flex-col gap-8 w-[12.5rem] relative">
                 <ColorPicker/>
                 <StrokeWidthSlider/>
                 <MemberList/>

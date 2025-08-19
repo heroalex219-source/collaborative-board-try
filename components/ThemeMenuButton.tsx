@@ -21,7 +21,7 @@ const ThemeMenuButton = (props: React.HTMLAttributes<HTMLButtonElement>) => {
         <Button
           variant='outline'
           size='icon'
-          className='h-9 dark:bg-stone-700'
+          className='h-9 w-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200'
           aria-label='Switch theme'
           {...props}
         >

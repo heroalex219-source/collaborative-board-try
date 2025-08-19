@@ -120,10 +120,10 @@ export default function DrawingCanvas() {
   return (
     <div
       ref={containerRef}
-      className='relative flex h-full w-full items-center justify-center'
+      className='relative flex h-full w-full items-center justify-center bg-gray-50 dark:bg-gray-900'
     >
       {!isCanvasLoading && (
-        <div className='absolute right-[25px] top-[25px] flex select-none rounded-none rounded-bl rounded-tr-[2.5px]'>
+        <div className='absolute right-6 top-6 flex select-none rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700'>
           
           <UndoButton  undo={undo} />
           <ClearButton canvasRef={canvasRef} clear={clear} />
@@ -138,7 +138,7 @@ export default function DrawingCanvas() {
         onTouchStart={handleInteractStart}
         width={0}
         height={0}
-        className='touch-none rounded border bg-white'
+        className='touch-none rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white shadow-2xl'
       />
     </div>
   )

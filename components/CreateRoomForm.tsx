@@ -98,9 +98,13 @@ export default function CreateRoomForm({ roomId }: CreateRoomFormProps) {
           name='username'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-foreground  '>Username</FormLabel>
+              <FormLabel className='text-sm font-medium'>Username</FormLabel>
               <FormControl>
-                <Input className='dark:bg-stone-800' placeholder='Name' {...field} />
+                <Input 
+                  className='h-11 bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent' 
+                  placeholder='Enter your name' 
+                  {...field} 
+                />
               </FormControl>
               <FormMessage className='text-xs' />
             </FormItem>
@@ -108,15 +112,15 @@ export default function CreateRoomForm({ roomId }: CreateRoomFormProps) {
         />
 
         <div>
-          <p className='mb-2 text-sm font-medium'>Room ID</p>
+          <p className='mb-3 text-sm font-medium'>Room ID</p>
 
-          <div className='flex h-10 w-full items-center justify-between rounded-md border bg-background px-3 py-2 text-sm dark:bg-stone-800 text-muted-foreground'>
-            <span>{roomId}</span>
+          <div className='flex h-11 w-full items-center justify-between rounded-lg border bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 px-4 py-2 text-sm'>
+            <span className='font-mono text-gray-700 dark:text-gray-300'>{roomId}</span>
             <CopyButton value={roomId} />
           </div>
         </div>
 
-        <Button type='submit' className='mt-2 w-full'>
+        <Button type='submit' className='mt-4 w-full h-11 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200'>
           {isLoading ? <Loader2 className='h-4 w-4 animate-spin' /> : 'Create a Room'}
         </Button>
       </form>

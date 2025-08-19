@@ -14,8 +14,8 @@ export default function LeaveButton() {
 
   return (
     <Button
-      variant='destructive'
-      className='absolute bottom-0 w-full'
+      variant='outline'
+      className='absolute bottom-0 w-full h-11 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/30 font-medium rounded-lg transition-all duration-200'
       onClick={() => {
         setIsLoading(true)
         socket.emit('leave-room')

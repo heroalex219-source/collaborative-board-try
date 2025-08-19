@@ -29,10 +29,10 @@ const DisconnectedDialog = () => {
     <Dialog>
       <DialogTrigger ref={dialogTriggerRef} className='hidden'></DialogTrigger>
 
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>You were disconnected!</DialogTitle>
-          <DialogDescription>
+      <DialogContent className='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700'>
+        <DialogHeader className='text-center'>
+          <DialogTitle className='text-xl font-bold text-red-600 dark:text-red-400'>Connection Lost!</DialogTitle>
+          <DialogDescription className='text-gray-600 dark:text-gray-400 mt-2'>
             You were out of the browser for a while and lost the connection. Please create
             a new room or join a room to draw again.
           </DialogDescription>

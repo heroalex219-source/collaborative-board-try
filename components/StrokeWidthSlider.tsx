@@ -12,11 +12,11 @@ export default function StrokeWidthSlider() {
   ])
 
   return (
-    <div>
-      <div className=' bg-stone-800 rounded-sm p-2 mb-4 flex select-none items-center justify-between'>
-        <Label>Stroke Width</Label>
+    <div className='space-y-4'>
+      <div className='flex select-none items-center justify-between'>
+        <Label className='text-sm font-semibold text-gray-700 dark:text-gray-300'>Stroke Width</Label>
 
-        <span className='px-2 py-0.5 text-sm text-muted-foreground'>
+        <span className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full font-medium'>
           {strokeWidth[0]}
         </span>
       </div>
@@ -27,7 +27,7 @@ export default function StrokeWidthSlider() {
         step={1}
         value={strokeWidth}
         onValueChange={setStrokeWidth}
-        className='[&_[role=slider]]:h-4 [&_[role=slider]]:w-4'
+        className='[&_[role=slider]]:h-5 [&_[role=slider]]:w-5 [&_[role=slider]]:bg-white [&_[role=slider]]:border-2 [&_[role=slider]]:border-blue-500 [&_[role=slider]]:shadow-lg'
         aria-label='Stroke width'
       />
     </div>
